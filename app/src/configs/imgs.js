@@ -25,5 +25,11 @@ export default {
     nav_setting: require("../assets/imgs/nav_setting.png"),
     video_play: require("../assets/imgs/video_play.png"),
     gif_play: require("../assets/imgs/gif_play.png"),
+    detail_back: require("../assets/imgs/detail_back.png"),
+    detail_ding: require("../assets/imgs/detail_ding.png"),
+    detail_cai: require("../assets/imgs/detail_cai.png"),
+    detail_share: require("../assets/imgs/detail_share.png"),
+    nav_review: require("../assets/imgs/nav_review.png"),
+    nav_search: require("../assets/imgs/nav_search.png"),
 
 }

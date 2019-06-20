@@ -8,14 +8,6 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
-import EntypoIcon from "react-native-vector-icons/Entypo";
-import AntDesignIcon from "react-native-vector-icons/AntDesign";
-import FeatherIcon from "react-native-vector-icons/Feather";
-import Colors from "./app/src/configs/ComStyle";
-import TabBar from './app/src/view/TabBar';
-import Details from './app/src/view/details'
-import WebPage from './app/src/view/webPage'
-
 
 import {
     createAppContainer,
@@ -23,6 +15,15 @@ import {
     createStackNavigator,
     SafeAreaView,
 } from "react-navigation";
+
+import EntypoIcon from "react-native-vector-icons/Entypo";
+import AntDesignIcon from "react-native-vector-icons/AntDesign";
+import FeatherIcon from "react-native-vector-icons/Feather";
+import Colors from "./app/src/configs/ComStyle";
+import TabBar from './app/src/view/TabBar';
+import Details from './app/src/view/details'
+import WebPage from './app/src/view/webPage'
+import ContentDetail from './app/src/view/ContentDetail'
 
 import Essence from './app/src/view/Essence';
 import New from './app/src/view/New';
@@ -98,7 +99,8 @@ const stackNav = createStackNavigator({
     BottomTab,
     Publish,
     Details,
-    WebPage
+    WebPage,
+    ContentDetail
 },{
     initialRouteName: 'BottomTab',
     defaultNavigationOptions: {

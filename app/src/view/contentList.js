@@ -93,9 +93,9 @@ export default class ContentList extends Component {
     _onPressUser = (user) => {
         this.props.navigation.navigate('Details', {user});
     };
-    // _onPressContent = (item) => {
-    //     this.props.navigation.navigate('ContentDetail', {item});
-    // };
+    _onPressContent = (item) => {
+        this.props.navigation.navigate('ContentDetail', {item});
+    };
 }
 
 const styles = StyleSheet.create({

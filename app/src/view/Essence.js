@@ -12,21 +12,25 @@ import ContentWaterfall from './contentWaterfall';
 
 
 export default class Essence extends Component {
-    render() {
-        const {navigation} = this.props;
-        const headerLeft = <NavItem
+    constructor(props){
+        super(props);
+        this.headerLeft = <NavItem
             source={Imgs.nav_game}
             onPress={() => this.props.navigation.navigate('WebPage', {source: {uri: 'http://d.api.budejie.com/user/hot/35'}})}
         />;
 
-        const headerRight= <NavItem
+        this.headerRight= <NavItem
             source={Imgs.nav_random}
             onPress={() => this.props.navigation.navigate('Details')}
         />;
+    }
+    render() {
+        const {navigation} = this.props;
+
         return (
             <View style={{flex:1}}>
                 <SafeAreaView style={{backgroundColor: Colors.titleRed}}>
-                    <Header title="精华" style={{backgroundColor: Colors.titleRed}} leftComponent={headerLeft} navigation={this.props.navigation} rightComponent={headerRight} />
+                    <Header title="精华" style={{backgroundColor: Colors.titleRed}} leftComponent={this.headerLeft} navigation={this.props.navigation} rightComponent={this.headerRight} />
                 </SafeAreaView>
                 <ScrollableTabView renderTabBar={this._renderTabBar}>
                     <ContentList
