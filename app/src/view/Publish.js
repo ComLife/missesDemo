@@ -5,8 +5,6 @@ import {
 	Text, 
 	TouchableOpacity,
 	StyleSheet, 
-	Dimensions, 
-	Platform,
 	FlatList,
 	Image,
 } from 'react-native';

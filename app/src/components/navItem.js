@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
-import { Image, TouchableOpacity, StyleSheet, ViewPropTypes } from 'react-native';
+import { Image, TouchableOpacity, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
+import Imgs from '../configs/imgs'
+import Colors from '../configs/ComStyle'
 
 export default class NavItem extends Component {
+    static propTypes = {
+        source: PropTypes.number,
+        onPress: PropTypes.func,
+        touchStyle: PropTypes.object,
+        imgStyle: PropTypes.object,
+    };
+
+    static defaultProps = {
+        source: Imgs.nav_game,
+        onPress: null,
+        touchStyle: null,
+        imgStyle: null,
+    };
     render() {
-        const { style, source, onPress } = this.props;
+        const { source, onPress } = this.props;
         return (
             <TouchableOpacity
-                style={style}
+                style={[styles.item, this.props.touchStyle]}
                 onPress={onPress}
             >
                 <Image
-                    resizeMode='contain'
                     source={source}
-                    style={styles.image}
+                    style={this.props.imgStyle}
                 />
             </TouchableOpacity>
         )
@@ -27,21 +41,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-    image: {
-        width: 20,
-        height:20,
-    }
 });
 
-NavItem.propTypes = {
-    style: ViewPropTypes.style,
-    source: PropTypes.object,
-    onPress: PropTypes.func,
-};
-
-NavItem.defaultProps = {
-    style: styles.item,
-    source: {uri: 'nav_back'},
-    onPress: null,
-};
 

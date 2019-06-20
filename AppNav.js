@@ -14,6 +14,7 @@ import FeatherIcon from "react-native-vector-icons/Feather";
 import Colors from "./app/src/configs/ComStyle";
 import TabBar from './app/src/view/TabBar';
 import Details from './app/src/view/details'
+import WebPage from './app/src/view/webPage'
 
 
 import {
@@ -96,7 +97,8 @@ const BottomTab = createBottomTabNavigator({
 const stackNav = createStackNavigator({
     BottomTab,
     Publish,
-    Details
+    Details,
+    WebPage
 },{
     initialRouteName: 'BottomTab',
     defaultNavigationOptions: {

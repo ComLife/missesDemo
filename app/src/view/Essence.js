@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {Platform, StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, View, SafeAreaView } from "react-native";
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 import API from '../configs/API';
 import NavItem from '../components/navItem';

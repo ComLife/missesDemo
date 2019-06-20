@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
-    StyleSheet, View, Text, Image, TouchableOpacity, Platform, StatusBar, Dimensions
+    StyleSheet, View, Text, Image, TouchableOpacity, Dimensions
 } from 'react-native';
 
 import Imgs from '../configs/imgs';
@@ -51,22 +51,22 @@ export default class Header extends Component {
          */
         return (
             <View style={[styles.header, style]}>
-                {
-                    leftComponent ||
-                    (leftTitle ?
-                        <TouchableOpacity
-                            style={[styles.touchOpa, leftStyle]} activeOpacity={0.5}
-                            onPress={() => (onPressLeft ? onPressLeft() : (this.props.navigation.goBack()))}
-                        >
-                            <Image source={leftImage || Imgs.back} style={styles.leftImage} />
-                            <Text style={[styles.leftText, leftTextStyle, {color: titleColor}]}>{leftTitle}</Text>
-                        </TouchableOpacity> : <View/>)
-                }
                 <View style={styles.center}>
                     {titleComponent || <Text style={[styles.headerTitle, titleStyle, {color: titleColor} ]}>{title}</Text>}
                 </View>
+                {
+                    leftComponent ||
+                    (leftTitle != undefined ?
+                        <TouchableOpacity
+                            style={[styles.touchOpa, leftStyle]} activeOpacity={0.5}
+                            onPress={() => {(onPressLeft ? onPressLeft() : (this.props.navigation.goBack()))}}
+                        >
+                            <Image source={leftImage || Imgs.back} style={leftImage} />
+                            <Text style={[styles.leftText, leftTextStyle, {color: titleColor}]}>{leftTitle}</Text>
+                        </TouchableOpacity> : <View/>)
+                }
                 {rightComponent ||
-                    (rightTitle ?
+                    (rightTitle != undefined ?
                         <TouchableOpacity style={null} activeOpacity={0.5} onPress={onPressRight}>
                             <Text style={[styles.rightText, rightTextStyle, {color: titleColor}]}>{rightTitle}</Text>
                         </TouchableOpacity> : <View/>)
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 15,
-        backgroundColor: Colors.themeWhite
+        backgroundColor: Colors.themeWhite,
     },
     headerTitle: {
         fontSize: 20,
@@ -98,10 +98,8 @@ const styles = StyleSheet.create({
     touchOpa: {
         flexDirection: 'row',
         alignItems: 'center',
-    },
-    leftImage: {
-        width: 10,
-        height: 20,
+        height: 30,
+        minWidth: 40,
     },
     leftText: {
         fontSize: 20,
@@ -115,9 +113,9 @@ const styles = StyleSheet.create({
     },
     center: {
         position: 'absolute',
-        right:0,
-        left:0,
+        right:30,
+        left:30,
         justifyContent:'center',
-        flexDirection:'row'
+        flexDirection:'row',
     }
 });

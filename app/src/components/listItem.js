@@ -4,6 +4,8 @@ import PlacehoderImage from '../components/PlaceholderImage';
 import PlayImage from './PlayImage';
 import { width, height } from '../configs/Device';
 import PropTypes from 'prop-types';
+import Imgs from '../configs/imgs';
+
 
 
 export default class ListItem extends Component {
@@ -55,7 +57,7 @@ export default class ListItem extends Component {
                     <Text style={styles.itemText}>{item.text}</Text>
                     <PlacehoderImage
                         source={{uri: image}}
-                        placeholder={{uri: 'placeholder'}}
+                        placeholder={Imgs.placeholder}
                         style={{width: imageWidth, height: imageHeight}}
                     />
                 </TouchableOpacity>
@@ -70,7 +72,7 @@ export default class ListItem extends Component {
                     <PlayImage
                         source={{uri: image}}
                         resizeMode='contain'
-                        placeholder={{uri: 'placeholder'}}
+                        placeholder={Imgs.placeholder}
                         style={{width: imageWidth, height: imageHeight}}
                         playSource={{uri: 'gif_play'}}
                         playStyle={styles.itemPlay}
@@ -88,7 +90,7 @@ export default class ListItem extends Component {
                     <PlayImage
                         source={{uri: image}}
                         resizeMode='contain'
-                        placeholder={{uri: 'placeholder'}}
+                        placeholder={Imgs.placeholder}
                         style={{width: imageWidth, height: imageHeight}}
                         playSource={{uri: 'video_play'}}
                         playStyle={styles.itemPlay}

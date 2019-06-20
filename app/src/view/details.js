@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { 
-	View,
-	SafeAreaView, 
+	SafeAreaView,
 	Text, 
 	TouchableOpacity,
 	StyleSheet,
 } from 'react-native';
-import { width, height, isIPhoneX } from '../configs/Device';
+import { width, isIPhoneX } from '../configs/Device';
 
 export default class Detail extends Component {
 	static navigationOptions = ({navigation}) => {

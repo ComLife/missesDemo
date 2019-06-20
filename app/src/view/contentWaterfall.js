@@ -3,6 +3,7 @@ import {SafeAreaView, Text, View, StyleSheet, TouchableOpacity } from "react-nat
 import MasonryList from '@appandflow/masonry-list';
 import PlacehoderImage from '../components/PlaceholderImage';
 import { width, height } from '../configs/Device';
+import Imgs from '../configs/imgs';
 
 const itemWidth = (width - 16) / 2;
 
@@ -101,7 +102,7 @@ export default class ContentWaterfall extends React.Component {
                 style={styles.item}>
                 <PlacehoderImage
                     source={{uri: item.video.thumbnail[0]}}
-                    placeholder={{uri: 'placeholder'}}
+                    placeholder={Imgs.placeholder}
                     style={{width: itemWidth, height: itemHeight, borderRadius: 4}}
                 />
                 <View style={styles.itemText}>

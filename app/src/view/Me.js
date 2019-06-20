@@ -19,8 +19,8 @@ const numColumns = 5;
 export default class Me extends Component {
     static navigationOptions = {
         title: '我的',
-        headerLeft: <NavItem source={{uri: 'nav_coin'}} />,
-        headerRight: <NavItem source={{uri: 'nav_setting'}} />,
+        headerLeft: <NavItem source={Imgs.nav_coin} />,
+        headerRight: <NavItem source={Imgs.nav_setting}/>,
     };
     constructor(props){
         super(props);

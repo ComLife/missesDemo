@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import {
-    StyleSheet,
     Text,
     View,
-    SafeAreaView,
     TouchableOpacity,
 } from 'react-native';
-import { width, height, isIPhoneX } from '../configs/Device';
+import { isIPhoneX } from '../configs/Device';
 import Colors from "../configs/ComStyle";
 
 

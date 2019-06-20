@@ -21,4 +21,9 @@ export default {
     back: require("../assets/imgs/back.png"),
     nav_game: require("../assets/imgs/nav_game.png"),
     nav_random: require("../assets/imgs/nav_random.png"),
+    nav_coin: require("../assets/imgs/nav_coin.png"),
+    nav_setting: require("../assets/imgs/nav_setting.png"),
+    video_play: require("../assets/imgs/video_play.png"),
+    gif_play: require("../assets/imgs/gif_play.png"),
+
 }
