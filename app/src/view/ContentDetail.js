@@ -54,7 +54,7 @@ export default class ContentDetail extends Component {
                     ref={ref => this.flatList = ref}
                     data={data}
                     scrollEnabled={portrait}                                // 是否可以滚动
-                    ListHeaderComponent={this._ListHeaderComponent}         // 头部组件。可以是 React Component, 也可以是一个 render 函数，或者渲染好的 element。
+                    // ListHeaderComponent={this._ListHeaderComponent}         // 头部组件。可以是 React Component, 也可以是一个 render 函数，或者渲染好的 element。
                     renderItem={this._renderItem}                           // item渲染函数
                     refreshing={refreshing}                                 // 是否加载
                     onRefresh={() => this._onRefrsh(true)}
@@ -100,18 +100,18 @@ export default class ContentDetail extends Component {
         if (item.type === 'video') {
             return (
                 <View style={{marginBottom: 20, backgroundColor: '#fff'}}>
-                    {/*<VideoPlayer*/}
-                        {/*endWithThumbnail={true}*/}
-                        {/*thumbnail={{uri: item.video.thumbnail[0]}}*/}
-                        {/*portrait={portrait}*/}
-                        {/*ref={ref => this.video = ref}*/}
-                        {/*video={{uri: item.video.video[0]}}*/}
-                        {/*videoWidth={portrait ? width : height}*/}
-                        {/*videoHeight={portrait ? (width / item.video.width * item.video.height): width}*/}
-                        {/*onToggleFullScreen={this._onToggleFullScreen}*/}
-                        {/*autoplay={true}*/}
-                        {/*loop={true}*/}
-                        {/*/>*/}
+                    <VideoPlayer
+                        endWithThumbnail={true}
+                        thumbnail={{uri: item.video.thumbnail[0]}}
+                        portrait={portrait}
+                        ref={ref => this.video = ref}
+                        video={{uri: item.video.video[0]}}
+                        videoWidth={portrait ? width : height}
+                        videoHeight={portrait ? (width / item.video.width * item.video.height): width}
+                        onToggleFullScreen={this._onToggleFullScreen}
+                        // autoplay={true}
+                        loop={true}
+                        />
                 </View>
                 
             )
@@ -133,7 +133,7 @@ export default class ContentDetail extends Component {
                             source={{uri: item.image.big[0]}}
                             resizeMode={'contain'}
                             style={{width, height: width / item.image.width * item.image.height}}
-                            placeholder={{uri: 'placeholder'}}
+                            placeholder={Imgs.placeholder}
                             />
                     </View>
                 )
@@ -145,8 +145,8 @@ export default class ContentDetail extends Component {
                         source={{uri: item.gif.images[0]}}
                         resizeMode={'contain'}
                         style={{width, height: width / item.gif.width * item.gif.height}}
-                        placeholder={{uri: 'placeholder'}}
-                        playSource={{uri: 'gif_play'}}
+                        placeholder={Imgs.placeholder}
+                        playSource={Imgs.gif_play}
                         playStyle={styles.itemPlay}
                         hidePlay={true}
                         />
@@ -176,8 +176,8 @@ export default class ContentDetail extends Component {
 
     _renderItem = ({item}) => {
         return (
-            <CommentItem 
-                item={item} 
+            <CommentItem
+                item={item}
                 onPressUser={this._onPressUser}
                 onPressContent={this._onPressContent}
                 />

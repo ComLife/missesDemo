@@ -5,6 +5,7 @@ import { fetchSubScribeList } from '../actions/Friend'
 import PlacehoderImage from '../components/PlaceholderImage';
 import Header from '../components/Header'
 import Colors from "../configs/ComStyle";
+import Imgs from '../configs/imgs'
 
 // import store from '../store/store';
 
@@ -70,7 +71,7 @@ class Friend extends Component {
             >
                 <PlacehoderImage
                     source={{uri: item.image_list}}
-                    placeholder={{uri: 'placeholder'}}
+                    placeholder={Imgs.placeholder}
                     style={{width: 60, height: 60}}
                 />
 
@@ -86,7 +87,7 @@ class Friend extends Component {
                 </View>
 
                 <PlacehoderImage
-                    source={{uri: 'arrow_right'}}
+                    source={Imgs.arrow_right}
                     style={{width: 7, height: 12}}
                 />
             </TouchableOpacity>

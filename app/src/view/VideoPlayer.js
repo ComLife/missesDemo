@@ -98,14 +98,14 @@ export default class VideoPlayer extends Component {
         super(props);
 
         this.state = {
-        isStarted: props.autoplay,
-        isPlaying: props.autoplay,
-        width: 200,
-        progress: 0,
-        isMuted: props.defaultMuted,
-        isControlsVisible: !props.hideControlsOnStart,
-        duration: 0,
-        isSeeking: false,
+            isStarted: props.autoplay,
+            isPlaying: props.autoplay,
+            width: 200,
+            progress: 0,
+            isMuted: props.defaultMuted,
+            isControlsVisible: !props.hideControlsOnStart,
+            duration: 0,
+            isSeeking: false,
         };
 
         this.seekBarWidth = 200;
@@ -134,15 +134,15 @@ export default class VideoPlayer extends Component {
 
     componentWillUnmount() {
         if (this.controlsTimeout) {
-        clearTimeout(this.controlsTimeout);
-        this.controlsTimeout = null;
+            clearTimeout(this.controlsTimeout);
+            this.controlsTimeout = null;
         }
     }
 
     onLayout(event) {
         const { width } = event.nativeEvent.layout;
         this.setState({
-        width,
+            width,
         });
     }
 
@@ -354,10 +354,10 @@ export default class VideoPlayer extends Component {
         <BackgroundImage
             {...props}
             style={[
-            styles.thumbnail,
-            this.getSizeStyles(),
-            style,
-            customStyles.thumbnail,
+                styles.thumbnail,
+                this.getSizeStyles(),
+                style,
+                customStyles.thumbnail,
             ]}
             source={thumbnail}
             >
@@ -451,32 +451,32 @@ export default class VideoPlayer extends Component {
 
     renderVideo() {
         const {
-        video,
-        style,
-        resizeMode,
-        pauseOnPress,
-        fullScreenOnLongPress,
-        customStyles,
-        ...props
+            video,
+            style,
+            resizeMode,
+            pauseOnPress,
+            fullScreenOnLongPress,
+            customStyles,
+            ...props
         } = this.props;
         return (
         <View style={customStyles.videoWrapper}>
             <Video
-            {...props}
-            style={[
-                styles.video,
-                this.getSizeStyles(),
-                style,
-                customStyles.video,
-            ]}
-            ref={p => { this.player = p; }}
-            muted={this.props.muted || this.state.isMuted}
-            paused={!this.state.isPlaying}
-            onProgress={this.onProgress}
-            onEnd={this.onEnd}
-            onLoad={this.onLoad}
-            source={video}
-            resizeMode={resizeMode}
+                {...props}
+                style={[
+                    styles.video,
+                    this.getSizeStyles(),
+                    style,
+                    customStyles.video,
+                ]}
+                ref={p => { this.player = p; }}
+                muted={this.props.muted || this.state.isMuted}      // 控制音频是否静音
+                paused={!this.state.isPlaying}                      // 控制播放器是否暂停。
+                onProgress={this.onProgress}                        // 视频播放过程中每个间隔进度单位（通常不足一秒，你可以打印日志测试下）调用的回调
+                onEnd={this.onEnd}                                  // 播放完后的回调
+                onLoad={this.onLoad}                                // 加载媒体并准备播放时调用的回调函数。
+                source={video}                                      // 资源
+                resizeMode={resizeMode}                             // 确定当帧与原始视频尺寸不匹配时如何调整视频大小。
             />
             <View style={[this.getSizeStyles(), { marginTop: -this.getSizeStyles().height }, ]}>
                 <TouchableOpacity
@@ -503,7 +503,8 @@ export default class VideoPlayer extends Component {
         const { isStarted } = this.state;
 
         if (!isStarted && thumbnail) {
-        return this.renderThumbnail();
+            console.log('afdasdfasdfdsaf')
+            return this.renderThumbnail();
         } else if (!isStarted) {
         return (
             <View style={[styles.preloadingPlaceholder, this.getSizeStyles(), style]}>
@@ -511,10 +512,12 @@ export default class VideoPlayer extends Component {
             </View>
         );
         }
-        return this.renderVideo();
+        // return this.renderVideo();
     }
 
     render() {
+        console.log('VideoPlayer props', this.props);
+        console.log('VideoPlayer state', this.props);
         return (
         <View onLayout={this.onLayout} style={this.props.customStyles.wrapper}>
             {this.renderContent()}

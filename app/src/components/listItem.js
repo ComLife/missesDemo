@@ -74,7 +74,7 @@ export default class ListItem extends Component {
                         resizeMode='contain'
                         placeholder={Imgs.placeholder}
                         style={{width: imageWidth, height: imageHeight}}
-                        playSource={{uri: 'gif_play'}}
+                        playSource={Imgs.gif_play}
                         playStyle={styles.itemPlay}
                         hidePlay
                     />
@@ -92,7 +92,7 @@ export default class ListItem extends Component {
                         resizeMode='contain'
                         placeholder={Imgs.placeholder}
                         style={{width: imageWidth, height: imageHeight}}
-                        playSource={{uri: 'video_play'}}
+                        playSource={Imgs.video_play}
                         playStyle={styles.itemPlay}
                         hidePlay={false}
                     />

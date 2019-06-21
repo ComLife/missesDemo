@@ -32,9 +32,9 @@ export default class PlacehoderImage extends Component {
 
     _renderImage = () => {
         const { source, resizeMode } = this.props;
-        const ImageType = source.uri.indexOf('http') < 0 ? Image : FastImage;
+        const ImageType = source.uri && source.uri.indexOf('http') < 0 ? Image : FastImage;
         return (
-            <ImageType 
+            <ImageType
                 source={source}
                 resizeMode={resizeMode || FastImage.resizeMode.cover}
                 style={styles.content}

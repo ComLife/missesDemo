@@ -67,9 +67,9 @@ export default class CommentItem extends Component {
                     <PlayImage 
                         source={{uri: image}}
                         resizeMode='contain'
-                        placeholder={{uri: 'placeholder'}}
+                        placeholder={Imgs.placeholder}
                         style={{width: imageWidth, height: imageHeigth}}
-                        playSource={{uri: 'gif_play'}}
+                        playSource={Imgs.gif_play}
                         playStyle={styles.itemPlay}
                         hidePlay={true}
                         />
@@ -87,7 +87,7 @@ export default class CommentItem extends Component {
                     <PlacehoderImage 
                         source={{uri: image}}
                         resizeMode='contain'
-                        placeholder={{uri: 'placeholder'}}
+                        placeholder={Imgs.placeholder}
                         style={{width: imageWidth, height: imageHeigth}}
                         />
                 </TouchableOpacity>
@@ -102,9 +102,9 @@ export default class CommentItem extends Component {
                     <PlayImage 
                         source={{uri: image}}
                         resizeMode='contain'
-                        placeholder={{uri: 'placeholder'}}
+                        placeholder={Imgs.placeholder}
                         style={{width: 150, height: 150}}
-                        playSource={{uri: 'video_play'}}
+                        playSource={Imgs.video_play}
                         playStyle={styles.itemPlay}
                         hidePlay={false}
                         />
