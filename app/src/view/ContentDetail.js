@@ -54,7 +54,7 @@ export default class ContentDetail extends Component {
                     ref={ref => this.flatList = ref}
                     data={data}
                     scrollEnabled={portrait}                                // 是否可以滚动
-                    // ListHeaderComponent={this._ListHeaderComponent}         // 头部组件。可以是 React Component, 也可以是一个 render 函数，或者渲染好的 element。
+                    ListHeaderComponent={this._ListHeaderComponent}         // 头部组件。可以是 React Component, 也可以是一个 render 函数，或者渲染好的 element。
                     renderItem={this._renderItem}                           // item渲染函数
                     refreshing={refreshing}                                 // 是否加载
                     onRefresh={() => this._onRefrsh(true)}
