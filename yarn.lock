@@ -5000,10 +5000,10 @@ react-native-vector-icons@^6.5.0:
     prop-types "^15.6.2"
     yargs "^13.2.2"
 
-react-native-video@^4.4.1:
-  version "4.4.1"
-  resolved "https://registry.npm.taobao.org/react-native-video/download/react-native-video-4.4.1.tgz#12c6a8bfbabfa7641338a52db3d857ac3073a4fd"
-  integrity sha1-Esaov7q/p2QTOKUts9hXrDBzpP0=
+react-native-video@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.npm.taobao.org/react-native-video/download/react-native-video-4.4.2.tgz#1abf2a50758cca9285b8807e945fb560316d9ae3"
+  integrity sha1-Gr8qUHWMypKFuIB+lF+1YDFtmuM=
   dependencies:
     keymirror "^0.1.1"
     prop-types "^15.5.10"

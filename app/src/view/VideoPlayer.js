@@ -503,7 +503,6 @@ export default class VideoPlayer extends Component {
         const { isStarted } = this.state;
 
         if (!isStarted && thumbnail) {
-            console.log('afdasdfasdfdsaf')
             return this.renderThumbnail();
         } else if (!isStarted) {
         return (
@@ -512,7 +511,7 @@ export default class VideoPlayer extends Component {
             </View>
         );
         }
-        // return this.renderVideo();
+        return this.renderVideo();
     }
 
     render() {
