@@ -27,6 +27,38 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Dijeljenje sa"</string>
     <string msgid="3300176832234831527" name="abc_shareactionprovider_share_with_application">"Dijeli putem aplikacije <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"Sažmi"</string>
+    <string name="exo_controls_fastforward_description">Brzo unaprijed</string>
+    <string name="exo_controls_fullscreen_description">Prikaz na cijelom zaslonu</string>
+    <string name="exo_controls_next_description">Sljedeći zapis</string>
+    <string name="exo_controls_pause_description">Pauza</string>
+    <string name="exo_controls_play_description">Reproduciraj</string>
+    <string name="exo_controls_previous_description">Prethodni zapis</string>
+    <string name="exo_controls_repeat_all_description">Ponovi sve</string>
+    <string name="exo_controls_repeat_off_description">Bez ponavljanja</string>
+    <string name="exo_controls_repeat_one_description">Ponovi jedno</string>
+    <string name="exo_controls_rewind_description">Unatrag</string>
+    <string name="exo_controls_shuffle_description">Reproduciraj nasumično</string>
+    <string name="exo_controls_stop_description">Zaustavi</string>
+    <string name="exo_download_completed">Preuzimanje je dovršeno</string>
+    <string name="exo_download_description">Preuzmi</string>
+    <string name="exo_download_downloading">Preuzimanje</string>
+    <string name="exo_download_failed">Preuzimanje nije uspjelo</string>
+    <string name="exo_download_notification_channel_name">Preuzimanja</string>
+    <string name="exo_download_removing">Uklanjanje preuzimanja</string>
+    <string name="exo_item_list">%1$s, %2$s</string>
+    <string name="exo_track_bitrate">%1$.2f Mbps</string>
+    <string name="exo_track_mono">Mono</string>
+    <string name="exo_track_resolution">%1$d × %2$d</string>
+    <string name="exo_track_selection_auto">Automatski</string>
+    <string name="exo_track_selection_none">Ništa</string>
+    <string name="exo_track_selection_title_audio">Audiozapis</string>
+    <string name="exo_track_selection_title_text">Tekst</string>
+    <string name="exo_track_selection_title_video">Videozapis</string>
+    <string name="exo_track_stereo">Stereo</string>
+    <string name="exo_track_surround">Okružujući zvuk</string>
+    <string name="exo_track_surround_5_point_1">5.1-kanalni okružujući zvuk</string>
+    <string name="exo_track_surround_7_point_1">7.1-kanalni okružujući zvuk</string>
+    <string name="exo_track_unknown">Nepoznato</string>
     <string msgid="146198913615257606" name="search_menu_title">"Pretraživanje"</string>
     <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
 </resources>

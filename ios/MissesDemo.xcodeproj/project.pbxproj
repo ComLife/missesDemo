@@ -53,7 +53,6 @@
 		A22671F2566E40DEB83203D4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D643646E7E2447BA9E0DA62 /* Entypo.ttf */; };
 		A781A40C85C1464A9230EFFC /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C691BC844A054E6CBD1375E1 /* libRNCWebView.a */; };
 		AB626EEA74764BA99DC1925E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AD363CD0ADF47BF913EC0D8 /* Zocial.ttf */; };
-		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		AF0CC15470164B2583005AE7 /* libRNVectorIcons-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E72B7F437C846B487069F97 /* libRNVectorIcons-tvOS.a */; };
 		B6A49088FD5744549C109188 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D37EE009405444B9A615A26 /* MaterialCommunityIcons.ttf */; };
 		BEA12BD0CCE34160A9D30287 /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F22EF06C4F3B4B43B333BE3D /* libRNGestureHandler-tvOS.a */; };
@@ -478,7 +477,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
-				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
